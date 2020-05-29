@@ -1,64 +1,122 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link href="styles/reset.css" rel="stylesheet">
-<link href="styles/style.css" rel="stylesheet">
-<meta charset="utf-8">
-<title>How To: Simple-At-Home Podcast Setup</title>
+    <link href="styles/reset.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>How To: RO-SHAM-BO</title>
 </head>
+
 <body>
-<main id="main">
-<div class="title-container">
-    <h1 class="title">Simple-At-Home Podcast Setup</h1>
-</div>
-<nav id="nav-bar">
-    <header>The Setup</header>
-    <ul class="nav-list">
-        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
-        <li><a class="nav-link" href="#What-You-Need">What You Need</a></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</nav>
-<section id="intro-section">
-    <header id="Introduction">Introduction</header>
-    <p></p>
-</section>
-<section id="materials-section">
-    <header id="What-You-Need">What You Need</header>
-    <p>Below is a list of essential </p>
-    <ul class="materials-list">
-        <li>Audio Interface</li>
-        <li>Microphone</li>
-        <li>XLR</li>
-        <li>Laptop</li>
-        <li>DAW</li>
-        <li>Headphones</li>
-    </ul>
-    <p></p>
-</section>
-<section id="section2">
-    <header id="section2-header"></header>
-    <p></p>
-    <p></p>
-</section>
-<section id="section3">
-    <header id="section3-header"></header>
-    <p></p>
-    <p></p>
-</section>
-<section id="section4">
-    <header id="section4-header"></header>
-    <p></p>
-    <p></p>
-</section>
-<section id="section5">
-    <header id="section5-header"></header>
-    <p></p>
-    <p></p>
-</section>
-</main>
+    <main id="main-doc">
+        <div class="">
+            <h1 class="title">How To: Ro-Sham-Bo in JavaScript</h1>
+        </div>
+
+        <nav id="navbar">
+            <header></header>
+            <ul class="">
+                <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+                <li><a class="nav-link" href="#User-Choice">User Choice</a></li>
+                <li><a class="nav-link" href="#Computer-Choice">Computer Choice</a></li>
+                <li><a class="nav-link" href="#User-vs-Computer">User vs. Computer</a></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+
+        <section id="intro-section">
+            <header id="Introduction">Introduction</header>
+            <p>RO-SHAM-BO (Rock, Paper, Scissors) has long been the dominate school yard arbitor of debate, worldwide.
+                Two oponents face off, each throwing one of three possible objects: ROCK , PAPER, or SCISSORS.  
+                Given the game's popularity and simplicity, Ro-Sham-Bo makes the beginner level JavaScript project.
+            </p>
+            <p>This game will be played between the user against the computer.  The code can be broken down into four parts</p>
+            <ol>
+                <li>User Choice</li>
+                <li>Computer Choice</li>
+                <li>User vs. Computer</li>
+                <li>Run the Program</li>
+            </ol>
+        </section>
+
+    <!--USER CHOICE-->
+        <section id="user-choice-section">
+            <header id="User-Choice">User Choice</header>
+            <p>First, the user needs to be able to select between ROCK, PAPER, or SCISSORS.  This calls for a function.</p>
+            <ul class="">
+                <li>Create a function: <strong>getUserChoice</strong></li>
+                <li>The function should take one parameter: <strong>userInput</strong></li>
+             </ul>
+            <pre><code>
+                //User Choice
+                const getUserChoice = userInput => {}
+            </code></pre>
+            <pre><code>
+                //Can also be written as:
+                const getUserChoice = function getUserChoice(userInput){};
+            </code></pre>
+            <p>Next, it is important to exercise a level of control over the user's input.</p>
+            <ul>
+                <li>Use the <code>.toLowerCase()</code> Method</li>
+                <li>This avoids complications if the user decides to get creative with their input </li>
+                <li>Set <code>userInput = userInput.toLowerCase();</code></li>
+            </ul>
+            <pre><code>
+                //User Choice
+                const getUserChoice = userInput => {
+                    userInput = userInput.toLowerCase();    
+                }
+            </code></pre>
+            <p>Now, test the user's input to ensure they made a vailid object section</p>
+            <ul>
+                <li>Write an <strong>if/else</strong> statement ensuring the user entered 'rock', 'paper', or 'scissors'.</li>
+                <li>If the <strong>userInput</strong> passes the test <strong>return</strong> the <strong>userInput</strong></li>
+                <li>Else <strong>console.log</strong> an error</li>
+                <li>Test the function using <strong>console.log</strong></li>
+            </ul>
+            <pre><code>
+                //User Choice
+                const getUserChoice = userInput => {
+                    userInput = userInput.toLowerCase();
+                    if (userInput === 'rock' || 'paper' || 'scissors'){
+                        return userInput;
+                    } else {
+                         console.log('ERROR');
+                    }
+                }
+
+                //TEST User Choice Function
+                console.log(getUserChoice('ROCK')); //returns : rock
+            </code></pre>
+        </section>
+
+    <!--COMPUTER CHOICE-->
+        <section id="computer-choice-section">
+            <header id="Computer-Choice">Computer Choice</header>
+            <p></p>
+            <p></p>
+        </section>
+
+        <section id="user-vs-computer-section">
+            <header id="User-vs-Computer">User vs. Computer</header>
+            <p></p>
+            <p></p>
+        </section>
+
+        <section id="section4">
+            <header id="section4-header"></header>
+            <p></p>
+            <p></p>
+        </section>
+
+        <section id="section5">
+            <header id="section5-header"></header>
+            <p></p>
+            <p></p>
+        </section>
+
+    </main>
 </body>
 </html>
